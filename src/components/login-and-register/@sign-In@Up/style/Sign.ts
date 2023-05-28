@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom"
+import { device } from "../../../../globalStyles/Devices.util";
 
 export const Container = styled.div`
     display: flex;
@@ -7,7 +8,14 @@ export const Container = styled.div`
 
 export const Question = styled.span`
     color: rgba(173, 173, 173, 0.50);
-    font-size: 12px;
+    
+    @media ${device.mobileS}{
+        font-size: 16px;
+    }
+    
+    @media ${device.tablet}{
+        font-size: 12px;
+    }
 `
 
 export const SignStyle = styled(Link)`
@@ -16,4 +24,12 @@ export const SignStyle = styled(Link)`
     color: #ffffff;
 
     margin-left: 5px;
+
+    @media ${device.mobileS}{
+        font-size: 16px;
+    }
+
+    @media ${device.tablet}{
+        font-size: 12px;
+    }
 `

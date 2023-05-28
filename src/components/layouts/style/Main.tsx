@@ -11,6 +11,8 @@ const MainStyle = styled(motion.div)`
     align-items: center;
     flex-direction: column;
 
+    transition: all 0.5s;
+
     overflow: hidden;
 `
 interface IMain {

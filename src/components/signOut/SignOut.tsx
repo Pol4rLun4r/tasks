@@ -1,7 +1,7 @@
 // style
 import Button from "./style/Button"
 import Container from "./style/Container";
-import SignOutIcon from "./@icon/Add";
+import SignOutIcon from "./@icon/icon";
 
 // handleLogout
 import useLogout from "../../hooks/useLogout";

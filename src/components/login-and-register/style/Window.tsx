@@ -7,9 +7,8 @@ import { ReactNode } from "react";
 const WindowStyle = styled(motion.div)`
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-
+    justify-content: space-around;
     overflow: hidden;
     
     transition: all 0.5s;
@@ -17,6 +16,7 @@ const WindowStyle = styled(motion.div)`
     @media ${device.mobileS}{
         width: 100%;
         height: 100%;
+
         padding-top: ${topAndBottom.mobileS};
         padding-bottom: ${topAndBottom.mobileS};
         padding-left: ${leftAndRight.mobileS};
@@ -52,12 +52,12 @@ const WindowStyle = styled(motion.div)`
     }
 
     @media ${device.mobile600px}{
+        width: 90%;
+
         padding-top: ${topAndBottom.mobile600px};
         padding-bottom: ${topAndBottom.mobile600px};
         padding-left: ${leftAndRight.mobile600px};
         padding-right: ${leftAndRight.mobile600px};
-
-        width: 90%;
     }
 
     @media ${device.tablet}{

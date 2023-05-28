@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { device } from "../../../../../globalStyles/Devices.util";
 
 const ContainerStyle = styled(motion.div)`
     background-color: transparent;
@@ -9,8 +10,15 @@ const ContainerStyle = styled(motion.div)`
     border-radius: 5px;
 
     position: absolute;
-    right: 25px;
     top: 10px;
+    
+    @media ${device.mobileS}{
+        margin-right: 10px;
+    }
+    
+    @media ${device.tablet}{
+        margin-right: auto;
+    }
 `
 
 interface IContainer {

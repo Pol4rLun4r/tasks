@@ -3,18 +3,43 @@ import { ReactComponent as ArrowUp } from "../../../../../../assets/tasks/arrow-
 import { ReactComponent as ArrowDown } from "../../../../../../assets/tasks/arrow-down.svg"
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import { device } from "../../../../../../globalStyles/Devices.util";
 
 export const UpDownContainerStyle = styled(motion.div)`
     display: flex;
     flex-direction: column;
 
     position: absolute;
-    left: 0;
+    
+    @media ${device.mobileS}{
+        left: -5px;
+        width: 28px;
+    }
+    
+    @media ${device.mobileL}{
+        left: 1px;
+    }
+
+    @media ${device.mobile600px}{
+        left: 10px;
+    }
+
+    @media ${device.tablet}{
+        left: 0;
+        width: 18px;
+    }
+
 `
 
 const styleSvgs = () => {
     return css`
-        width: 18px;
+        @media ${device.mobileS}{
+            width: 25px;
+        }
+
+        @media ${device.tablet}{
+            width: 18px;
+        }
     `
 }
 

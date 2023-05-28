@@ -7,18 +7,18 @@ interface IinputCheck {
 }
 
 export const Container = styled.div`
-    margin-bottom: 40px;
-
     p{
         font-size: 11px;
         font-family: monospace;
     }
 
     @media ${device.mobileS}{
+        margin-bottom: 60px;
         width: 100%;
     }
-
+    
     @media ${device.tablet}{
+        margin-bottom: 40px;
         width: 270px;
     }
 `
@@ -50,24 +50,30 @@ export const Content = styled.div`
 export const FocusInput = styled.div`
     display: block;
     position: absolute;
-    bottom: ${({ focused, isTrue }: IinputCheck) => focused || isTrue ? '12px' : '-12px'};
     width: 100%;
     height: 100%;
-
+    
     pointer-events: none;
 
-    font-size: 15px;
     text-transform: capitalize;
     color: #999999;
     line-height: 1.2;
-
+    
     transition: all 0.4s;
     
     padding-left: 5px;
+    
+    @media ${device.mobileS} {
+        bottom: ${({ focused, isTrue }: IinputCheck) => focused || isTrue ? '20px' : '-10px'};
+        font-size: 20px;
+    }
+
+    @media ${device.tablet}{
+        font-size: 15px;
+    }
 `
 
 export const InputStyle = styled.input`
-    font-size: 15px;
     text-transform: none;
     color: #ffffff;
     line-height: 1.2;
@@ -78,7 +84,6 @@ export const InputStyle = styled.input`
     background-color: transparent;
     
     width: 100%;
-    height: 35px;
 
     padding-left: 5px;
 
@@ -86,5 +91,14 @@ export const InputStyle = styled.input`
 
     &:focus{
         outline: 0;
+    }
+
+    @media ${device.mobileS} {
+        font-size: 20px;
+        height: 40px;
+    }
+
+    @media ${device.tablet} {
+        font-size: 17px;
     }
 `

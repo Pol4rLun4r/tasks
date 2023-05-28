@@ -17,13 +17,22 @@ const GlobalStyle = createGlobalStyle`
         user-select: none;
     }
 
-    #root {
+    body{
         width: 100vw;
         height: 100vh;
+        background-color: #171717;
+
+        overflow: hidden;
+    }
+
+    #root {
+        width: 100%;
+        height: 100%;
 
         background: linear-gradient(250.15deg, #171717 3.29%, #121212 94.75%);
-        color: white;   
+        color: white;
     }
-`
+    
+    `
 
 export default GlobalStyle;

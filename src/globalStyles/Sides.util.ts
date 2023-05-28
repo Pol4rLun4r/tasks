@@ -12,9 +12,9 @@ const topAndBottom = {
 }
 
 const leftAndRight = {
-    mobileS: '20px',
-    mobileM: '25px',
-    mobileL: '30px',
+    mobileS: '10px',
+    mobileM: '15px',
+    mobileL: '20px',
     myMobile: '35px',
     mobile500px: '55px',
     mobile600px: '60px',

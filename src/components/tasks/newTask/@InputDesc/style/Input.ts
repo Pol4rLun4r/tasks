@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { device } from "../../../../../globalStyles/Devices.util";
 import TextareaAutosize from "react-textarea-autosize";
+import { device } from "../../../../../globalStyles/Devices.util";
 
 interface IinputCheck {
     focused: boolean
@@ -8,7 +8,6 @@ interface IinputCheck {
 
 export const Container = styled.div`
     margin-bottom: 15px;
-
     width: 100%;
 
     p{
@@ -43,12 +42,19 @@ export const Label = styled.div`
 
     pointer-events: none;
 
-    font-size: 15px;
     text-transform: capitalize;
     color: #999999;
     line-height: 1.2;
 
     padding-left: 5px;
+
+    @media ${device.mobileS}{
+        font-size: 22px;
+    }
+
+    @media ${device.tablet}{
+        font-size: 15px;
+    }
 `
 
 export const InputStyle = styled(TextareaAutosize)`
@@ -73,5 +79,15 @@ export const InputStyle = styled(TextareaAutosize)`
 
     &:focus{
         outline: 0;
+    }
+
+    @media ${device.mobileS}{
+        font-size: 22px;
+        height: 40px;
+    }
+
+    @media ${device.tablet}{
+        font-size: 15px;
+        height: 32px;
     }
 `

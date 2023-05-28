@@ -24,7 +24,7 @@ export const SubContainer = styled.div`
     p{
         margin-top: 8px;
         margin-left: 7.5%;
-        font-size: 11px;
+        font-size: 13px;
         font-family: monospace;
     }
 `
@@ -38,19 +38,43 @@ export const LabelAndButtom = styled.div`
     margin-bottom: 5px;
 `
 
-const fontSize = '11px';
+const fontSizeDefault = '12px';
+const fontSizeMobileS = '15.5px';
+const fontSizeMobileM = '18px';
 
 export const Label = styled.label`
-    font-size: ${fontSize};
     color: rgb(153, 153, 153);
+    
+    @media ${device.mobileS}{
+        font-size: ${fontSizeMobileS};
+    }
+    
+    @media ${device.mobileM}{
+        font-size: ${fontSizeMobileM};
+    }
+    
+    @media ${device.tablet}{
+        font-size: ${fontSizeDefault};
+    }
 `
 
 export const Add = styled.button`
-    font-size: ${fontSize};
     color: #ffffff;
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    @media ${device.mobileS}{
+        font-size: ${fontSizeMobileS};
+    }
+
+    @media ${device.mobileM}{
+        font-size: ${fontSizeMobileM};
+    }
+
+    @media ${device.tablet}{
+        font-size: ${fontSizeDefault};
+    }
 `
 
 export const Content = styled.div`

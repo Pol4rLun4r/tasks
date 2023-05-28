@@ -1,10 +1,18 @@
 import styled from "styled-components";
 import { ReactComponent as RemoveIcon } from "../../../../../../assets/close.svg";
 import { motion } from "framer-motion";
+import { device } from "../../../../../../globalStyles/Devices.util";
 
 const RemoveStyle = styled(RemoveIcon)`
-    width: 20px;
     cursor: pointer;
+
+    @media ${device.mobileS}{
+        width: 28px;
+    }
+
+    @media ${device.tablet}{
+        width: 20px;
+    }
 `
 
 const Button = styled(motion.button)`
@@ -12,7 +20,22 @@ const Button = styled(motion.button)`
     border: none;
 
     position: absolute;
-    right: 0;
+    
+    @media ${device.mobileS}{
+        right: -1px;
+    }
+    
+    @media ${device.mobileL}{
+        right: 3px;
+    }
+
+    @media ${device.mobile600px}{
+        right: 10px;
+    }
+
+    @media ${device.tablet}{
+        right: 0;
+    }
 `
 
 interface IRemove {

@@ -1,5 +1,5 @@
 // style
-import BackIcon from "./@icon/Add";
+import BackIcon from "./@icon/icon";
 import Button from "./style/Button";
 import Container from "./style/Container";
 
