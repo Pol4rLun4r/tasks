@@ -5,11 +5,11 @@ const IconStyle = styled.img`
     margin-right: 3px;
 
     @media ${device.mobileS} {
-        width: 18px;
+        width: 30px;
     }
-
-    @media ${device.mobileL} {
-        width: 20px;
+    
+    @media ${device.tablet}{
+        width: 25px;
     }
 `
 

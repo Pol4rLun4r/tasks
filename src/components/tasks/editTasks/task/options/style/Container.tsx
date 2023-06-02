@@ -7,8 +7,14 @@ const ContainerStyle = styled(motion.div)`
     display: flex;
     flex-direction: row;
 
+    background-color: #8b8b8b14;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+
     position: absolute;
-    right: -39px; 
+    right: 10px;
+
+    padding-left: 5px;
 `
 
 interface IContainer {

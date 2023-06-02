@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../../../../globalStyles/Devices.util";
 
 interface IinputCheck {
     focused: boolean
@@ -10,9 +11,9 @@ export const Container = styled.div`
 
     p{  
         margin-top: 8px;
-        font-size: 11px;
+        font-size: 12px;
         font-family: monospace;
-    }
+    } 
 `
 
 export const SubContainer = styled.div`
@@ -39,20 +40,25 @@ export const Label = styled.div`
 
     pointer-events: none;
 
-    font-size: 15px;
     text-transform: capitalize;
     color: #999999;
     line-height: 1.2;
     
     padding-left: 5px;
+
+    @media ${device.mobileS}{
+        font-size: 22px;
+    }
+
+    @media ${device.tablet}{
+        font-size: 15px;
+    }
 `
 
 export const InputStyle = styled.input`
-    font-size: 15px;
     text-transform: none;
     color: #ffffff;
     line-height: 1.2;
-
     
     border-radius: 5px;
     border: 2px solid ${({ focused }: IinputCheck) => focused ? '#ffffff' : 'transparent'};
@@ -60,7 +66,6 @@ export const InputStyle = styled.input`
     
     margin-top: 10px;
     width: 100%;
-    height: 32px;
 
     padding-left: 5px;
 
@@ -72,5 +77,15 @@ export const InputStyle = styled.input`
 
     &:focus{
         outline: 0;
+    }
+
+    @media ${device.mobileS}{
+        font-size: 22px;
+        height: 40px;
+    }
+
+    @media ${device.tablet}{
+        font-size: 15px;
+        height: 32px;
     }
 `

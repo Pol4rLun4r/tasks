@@ -8,8 +8,8 @@ const Button = styled.button`
     position: absolute;
 
     @media ${device.mobileS}{
-        right: -5px;
-        top: -5px;
+        right: -10px;
+        top: -10px;
     }
     
     @media ${device.mobile500px}{

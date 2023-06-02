@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../../../globalStyles/Devices.util";
 
 interface Ichecked {
     styleChecked: boolean
@@ -23,27 +24,43 @@ const HiddenCheckBox = styled.input.attrs({ type: 'checkbox' })`
 const Text = styled.label`
     color: ${({ styleChecked }: Ichecked) => styleChecked ? '#6C6E71' : '#FFFFFF'};
     text-decoration: ${({ styleChecked }: Ichecked) => styleChecked ? 'line-through' : 'none'};
-    font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 93%;
+    
+    margin-left: 5px;
+    
+    @media ${device.mobileS}{
+        max-width: 90%;
+        font-size: 20px;
+    }
+    
+    @media ${device.tablet}{
+        max-width: 93%;
+        font-size: 16px;
+    }
 `
 
 const StyledCheckbox = styled.div`
-    width: 13px;
-    height: 13px;
     border: 2px solid;
     border-color: ${({ styleChecked }: Ichecked) => styleChecked ? '#6C6E71' : '#FFFFFF'};
     border-radius: 4px;
     background-color: ${({ styleChecked }: Ichecked) => styleChecked ? '#6C6E71' : 'none'};
 
-    margin-right: 6px;
-
     display: flex;
     justify-content: center;
     align-items: center;
 
+    @media ${device.mobileS}{
+        width: 18px;
+        height: 18px;
+    }
+
+    @media ${device.tablet}{
+        width: 16px;
+        height: 16px;
+    }
+    
     img{
         display: ${({ styleChecked }: Ichecked) => styleChecked ? 'block' : 'none'};
     }

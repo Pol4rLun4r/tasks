@@ -7,7 +7,6 @@ const BackgroundStyle = styled(motion.div)`
     justify-content: space-evenly;
     align-items: center;
     
-    font-size: 11px;
     width: 100%;
     height: 100%;
     position: absolute;

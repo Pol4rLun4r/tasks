@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { device } from "../../../../../../globalStyles/Devices.util";
 
 const DeleteStyle = styled(motion.button).attrs({ type: 'button' })`
     background-color: #C83333;
@@ -11,6 +12,15 @@ const DeleteStyle = styled(motion.button).attrs({ type: 'button' })`
     padding-left: 5px;
     padding-right: 5px;
     cursor: pointer;
+    
+    @media ${device.mobileS}{
+        font-size: 18px;
+    }
+
+    @media ${device.tablet}{
+        font-size: 15px;
+    }
+
 `
 
 const CancelStyle = styled(motion.button).attrs({ type: 'button' })`
@@ -21,6 +31,14 @@ const CancelStyle = styled(motion.button).attrs({ type: 'button' })`
     padding-right: 5px;
     border-radius: 3px;
     cursor: pointer;
+
+    @media ${device.mobileS}{
+        font-size: 18px;
+    }
+
+    @media ${device.tablet}{
+        font-size: 15px;
+    }
 `
 
 interface IBox {

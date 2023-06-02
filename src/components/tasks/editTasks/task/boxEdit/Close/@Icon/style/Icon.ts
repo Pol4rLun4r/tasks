@@ -4,15 +4,11 @@ import { device } from "../../../../../../../../globalStyles/Devices.util"
 const IconStyle = styled.img`
 
     @media ${device.mobileS} {
-        width: 16px;
+        width: 35px;
     }
-
-    @media ${device.mobileM} {
-        width: 18px;
-    }
-
-    @media ${device.mobileL} {
-        width: 20px;
+    
+    @media ${device.tablet}{
+        width: 30px;
     }
 `
 

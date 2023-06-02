@@ -62,7 +62,7 @@ const BoxDelete = ({ taskId }: IBox) => {
             {isError && !error?.response?.data?.message && <ErrorMsg>{error.message}</ErrorMsg>}
             {!isLoading && !isError &&
                 <>
-                    <Delete handle={handleDelete}>confirm to delete</Delete>
+                    <Delete handle={handleDelete}>delete</Delete>
                     <Cancel handle={handleCancel}>cancel</Cancel>
                 </>
             }

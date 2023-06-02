@@ -10,10 +10,6 @@ import Task from "./task/Task"
 // hooks
 import useTask from "../../../../hooks/tasks/useTask"
 import useCheckTask from "../../../../hooks/tasks/useCheckTask"
-import useAxiosPrivate from "../../../../hooks/useAxiosPrivate"
-
-// fetch
-import { useQuery } from "react-query"
 
 type IObjSubTask = {
     id: string

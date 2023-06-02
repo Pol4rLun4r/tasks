@@ -59,11 +59,13 @@ const Task = ({ taskName, taskId, taskDescription, taskSubTasks, propsRefContain
                     onMouseLeave={() => setViewOptionsAndMove(false)}
                 >
                     <AnimatePresence>
-                        {viewOptionsAndMove && <Move
-                            handleRefresh={refresh}
-                            refContainer={propsRefContainer}
-                            taskIndex={Index}
-                        />}
+                        {viewOptionsAndMove &&
+                            <Move
+                                handleRefresh={refresh}
+                                refContainer={propsRefContainer}
+                                taskIndex={Index}
+                            />
+                        }
                     </AnimatePresence>
                     <Text viewOptions={viewOptionsAndMove}>{taskName}</Text>
                     <AnimatePresence>

@@ -6,10 +6,10 @@ const Text = styled.p`
     text-shadow: 0px 0px 3px #FFFFFF;
     
     @media ${device.mobileS} {
-        font-size: 14px;
+        font-size: 20px;
     }
 
-    @media ${device.mobileL} {
+    @media ${device.tablet} {
         font-size: 16px;
     }
 `

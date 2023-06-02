@@ -5,10 +5,10 @@ const IconStyle = styled.img`
     margin-right: 3px;
 
     @media ${device.mobileS} {
-        width: 18px;
+        width: 26px;
     }
 
-    @media ${device.mobileL} {
+    @media ${device.tablet} {
         width: 20px;
     }
 `

@@ -3,22 +3,42 @@ import { ReactComponent as ArrowUp } from "../../../../../../assets/tasks/arrow-
 import { ReactComponent as ArrowDown } from "../../../../../../assets/tasks/arrow-down.svg"
 import { ReactNode } from "react";
 import { motion } from "framer-motion";
+import { device } from "../../../../../../globalStyles/Devices.util";
 
 const UpDownContainerStyle = styled(motion.div)`
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 
-    margin-right: 2px;
-    margin-bottom: 6px;
+    background-color: #00000044;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
 
+    
     position: absolute;
-    left: -18px;
+    left: 5px;
+    
+    @media ${device.mobileS}{
+        height: 40px;
+    }
+
+    @media ${device.tablet}{
+        height: 30px;
+        padding-bottom: 5px;
+    }
+
 `
 
 const styleSvgs = () => {
     return css`
-        width: 18px;
+        @media ${device.mobileS}{
+            width: 28px;
+        }
+
+        @media ${device.tablet}{
+            width: 20px;
+        }
     `
 }
 
@@ -33,7 +53,14 @@ const DownIcon = styled(ArrowDown)`
 const Button = styled.button.attrs({ type: 'button' })`
     background-color: transparent;
     border: none;
-    height: 12px;
+    
+    @media ${device.mobileS}{
+        height: 25px;
+    }
+    
+    @media ${device.tablet}{
+        height: 12px;
+    }
 `
 
 interface Ihandle {

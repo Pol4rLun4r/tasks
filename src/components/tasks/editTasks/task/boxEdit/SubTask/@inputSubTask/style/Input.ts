@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../../../../../globalStyles/Devices.util";
 
 interface IinputCheck {
     focused: boolean
@@ -15,14 +16,20 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-    width: 85%;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     transition: all 0.4s;
+    
+    @media ${device.mobileS}{
+        width: 80%;
+    }
+    
+    @media ${device.tablet}{
+        width: 85%;
+    }
 `
 
 export const InputStyle = styled.input`
@@ -48,5 +55,15 @@ export const InputStyle = styled.input`
 
     &:focus{
         outline: 0;
+    }
+
+    @media ${device.mobileS}{
+        font-size: 22px;
+        height: 40px;
+    }
+
+    @media ${device.tablet}{
+        font-size: 15px;
+        height: 32px;
     }
 `

@@ -6,6 +6,14 @@ export const Container = styled.div`
     height: 30px;
     position: relative;
     margin-bottom: 5px;
+
+    @media ${device.mobileS}{
+        height: 45px;
+    }
+    
+    @media ${device.tablet}{
+        height: 30px;
+    }
 `
 
 export const Content = styled.div`
@@ -34,13 +42,9 @@ export const Text = styled.label`
     white-space: nowrap;
 
     @media ${device.mobileS}{
-        font-size: 12px;
+        font-size: 20px;
     }
-
-    @media ${device.mobile600px}{
-        font-size: 15px;
-    }
-
+    
     @media ${device.tablet}{
         font-size: 16px;
     }

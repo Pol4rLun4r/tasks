@@ -1,10 +1,18 @@
 import styled, { css } from "styled-components";
 import { ReactComponent as EditIcon } from "../../../../../../assets/tasks/edit.svg";
 import { ReactComponent as DeleteIcon } from "../../../../../../assets/tasks/delete-bin.svg";
+import { device } from "../../../../../../globalStyles/Devices.util";
 
 const svgStyles = () => {
     return css`
+
+    @media ${device.mobileS}{
+        width: 28px;
+    }
+
+    @media ${device.tablet}{
         width: 18px;
+    }
     `
 }
 

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../../../../globalStyles/Devices.util";
 
 interface ISignIn {
     isValid: boolean
@@ -12,8 +13,12 @@ const Button = styled.button`
 
     transition: all 1.3s;
 
-    position: absolute;
+    @media ${device.mobileS}{
+        font-size: 20px;
+    }
 
-    bottom: 20px;
+    @media ${device.tablet}{
+        font-size: 16px;
+    }
 `
 export default Button;

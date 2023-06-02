@@ -11,7 +11,6 @@ const IconStyle = styled.img`
     @media ${device.tablet}{
         width: 25px;
     }
-
 `
 
 export default IconStyle
