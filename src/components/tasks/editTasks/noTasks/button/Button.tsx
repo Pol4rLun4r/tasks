@@ -9,7 +9,7 @@ const Button = () => {
     const [isHover, setIsHover] = useState(false);
 
     const handleNavigate = () => {
-        navigate('newtask')
+        navigate('/newtask')
     }
 
     return (

@@ -7,7 +7,7 @@ const Container = styled.div`
     /* margin-bottom: 40px; */
 
     @media ${device.mobileS}{
-        width: 90%;
+        width: 99%;
     }
 
     @media ${device.tablet}{

@@ -9,6 +9,8 @@ const WindowStyle = styled(motion.div)`
     flex-direction: column;
     align-items: center;
 
+    position: relative;
+
     padding-top: 60px;
     padding-bottom: 60px;
 

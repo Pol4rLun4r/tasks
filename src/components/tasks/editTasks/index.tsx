@@ -8,6 +8,7 @@ import { ErrorMsg, LoadingMsg } from "../../../globalStyles/Messages";
 import useAxiosPrivate from "../../../hooks/useAxiosPrivate";
 import useMutationObservable from "../../../hooks/useMutationObservable";
 import { isEqual, reject } from "lodash";
+import useArrayIsFull from "../../../hooks/useArrayIsFull";
 
 // fetch
 import { useQuery } from "react-query";
@@ -15,7 +16,9 @@ import { useQuery } from "react-query";
 // component
 import Task from "./task/Task";
 import SaveOrder from "./task/saveOrder";
+import NoTasks from "./noTasks/NoTasks";
 import { AnimatePresence } from "framer-motion";
+
 
 type Itasks = {
   id: string;
@@ -31,11 +34,15 @@ const Tasks = () => {
   const [isMatch, setIsMatch] = useState(false);
   const [order, setOrder] = useState<any>([]);
 
+  
   // fetch data
   const { data, isLoading, error } = useQuery<Itasks[]>('tasks', async () => {
     const response = await api.get('task')
     return response.data;
   });
+
+  // verify data
+  const isTasks = useArrayIsFull(data);
 
   useEffect(() => {
     const originalData: HTMLDivElement[] = [...refContainer.current?.children as any];
@@ -88,6 +95,8 @@ const Tasks = () => {
         {isLoading && <LoadingMsg>Loading...</LoadingMsg>}
         {error as any && <ErrorMsg>NetWork Error</ErrorMsg>}
 
+        {!isTasks && !isLoading && <NoTasks />}
+
         {data && data?.sort((a, b) => { return a.index - b.index })
           .map((task) => {
             return (
@@ -104,7 +113,7 @@ const Tasks = () => {
           })}
       </Container>
       <AnimatePresence>
-        {isMatch &&
+        {isMatch && !isTasks &&
           <SaveOrder handleRefresh={refresh} order={order} />
         }
       </AnimatePresence>

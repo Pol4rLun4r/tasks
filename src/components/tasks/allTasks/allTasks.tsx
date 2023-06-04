@@ -46,7 +46,7 @@ const AllTasks = () => {
                 {isLoading && <LoadingMsg>Loading...</LoadingMsg>}
                 {error as any && <ErrorMsg>NetWork Error</ErrorMsg>}
 
-                {!isTasks && <NoTasks />}
+                {!isTasks && !isLoading && <NoTasks />}
 
                 {isTasks && data?.map(task => {
                     return (
