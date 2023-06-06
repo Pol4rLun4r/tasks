@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.2] - 2023-06-06
+
+### Added
+- README adicionado aos arquivos
+- LICENSE adicionado aos arquivos
+
 ## [0.1.1] - 2023-06-04
 
 ### Added
